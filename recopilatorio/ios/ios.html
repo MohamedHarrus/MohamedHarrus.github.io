@@ -1,0 +1,27 @@
+<input type="text" id="searchInput" placeholder="Buscar...">
+<button onclick="searchFunction()">Buscar</button>
+
+<script>
+    function searchFunction() {
+        var input, filter, h1, p, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        h1 = document.getElementsByTagName('h1');
+        p = document.getElementsByTagName('p');
+
+        for (i = 0; i < h1.length; i++) {
+            txtValue = h1[i].textContent || h1[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                h1[i].style.display = "";
+                p[i].style.display = "";
+            } else {
+                h1[i].style.display = "none";
+                p[i].style.display = "none";
+            }
+        }
+    }
+</script>
+<h1>
+ios
+</h1>
+Esta es la secci&oacute;n de programas para Ios.

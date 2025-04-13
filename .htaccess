@@ -1,0 +1,2 @@
+php_value date.timezone Europe/Madrid
+ErrorDocument 403 /errores/404.html
